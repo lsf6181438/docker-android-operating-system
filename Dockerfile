@@ -10,8 +10,16 @@ RUN apt -y install git make wget g++ gcc python openjdk-8-jdk unzip bc bison bui
 # for static code check
 RUN apt -y install cppcheck 
 
-# for Airtest
-RUN apt -y install python3
+# for Airtest/Behave
+RUN apt -y install python3 python3-pip
+RUN pip3 install --upgrade pip
+RUN pip3 install opencv-contrib-python
+RUN pip3 install airtest
+RUN pip3 install pocoui
+RUN pip3 install behave
+RUN pip3 install moviepy
+RUN pip3 install allure-behave
+RUN chmod +x /usr/local/lib/python3.5/dist-packages/airtest/core/android/static/adb/linux/adb
 
 # for OTA upgrade
 RUN apt -y install adb
