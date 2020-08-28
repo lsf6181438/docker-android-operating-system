@@ -1,3 +1,8 @@
+########################################## TODO ##########################################
+###   make base image for build stage only, and make extra image for test/deploy stage? 
+##########################################################################################
+
+
 FROM ubuntu:18.04
 
 ### for RPC's environment
