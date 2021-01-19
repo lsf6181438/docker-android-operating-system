@@ -45,7 +45,7 @@ RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure dash
 
 # for allure 
 RUN apt -y install npm
-npm install -g allure-commandline --save-dev
+RUN npm install -g allure-commandline --save-dev
 
 # for scp
 RUN apt -y install sshpass
